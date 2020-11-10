@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sms_maintained/contact.dart';
 import 'package:sms_maintained/sms.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -28,6 +29,11 @@ _smsMaintained() {
   String address = '+27828546121';
 
   sender.sendSms(new SmsMessage(address, 'Hello flutter!'));
+}
+
+_contactMaintained() {
+  Contact contact = threads.first.contact;
+  print(contact.address);
 }
 
 class MyApp extends StatelessWidget {
